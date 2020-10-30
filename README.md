@@ -3,7 +3,7 @@
 # Next.js Commerce
 
 The all-in-one starter kit for high-performance e-commerce sites. With a few clicks, Next.js developers can clone, deploy and fully own their own store.
-Start right now at nextjs.org/commerce
+Start right now at [nextjs.org/commerce](https://nextjs.org/commerce)
 
 Demo live at: [demo.vercel.store](https://demo.vercel.store/)
 
@@ -22,10 +22,43 @@ This project is currently <b>under development</b>.
 - Dark Mode Support
 
 ## Work in progress
+
 We're using Github Projects to keep track of issues in progress and todo's. Here is our [Board](https://github.com/vercel/commerce/projects/1)
 
 ## Integrations
+
 Next.js Commerce integrates out-of-the-box with BigCommerce. We plan to support all major ecommerce backends.
+
+## Troubleshoot
+
+<details>
+<summary>I already own a BigCommerce store. What should I do?</summary>
+<br>
+First thing you do is: <b>set your environment variables</b>
+<br>
+<br>
+.env.local
+
+```sh
+BIGCOMMERCE_STOREFRONT_API_URL=<>
+BIGCOMMERCE_STOREFRONT_API_TOKEN=<>
+BIGCOMMERCE_STORE_API_URL=<>
+BIGCOMMERCE_STORE_API_TOKEN=<>
+BIGCOMMERCE_STORE_API_CLIENT_ID=<>
+```
+
+Next, you're free to customize the starter. More updates coming soon. Stay tuned.
+
+</details>
+
+<details>
+<summary>BigCommerce shows a Coming Soon page and requests a Preview Code</summary>
+<br>
+After Email confirmation, Checkout should be manually enabled through BigCommerce platform. Look for "Review & test your store" section through BigCommerce's dashboard.
+<br>
+<br>
+BigCommerce team has been notified and they plan to add more detailed about this subject.
+</details>
 
 ## Contribute
 
@@ -35,6 +68,8 @@ Our commitment to Open Source can be found [here](https://vercel.com/oss).
 2. Create a new branch `git checkout -b MY_BRANCH_NAME`
 3. Install yarn: `npm install -g yarn`
 4. Install the dependencies: `yarn`
-5. Run `yarn dev` to build and watch for code changes
-6. The development branch is `development` (this is the branch pull requests should be made against).
+5. Duplicate `.env.template` and rename it to `.env.local`.
+6. Add proper store values to `.env.local`.
+7. Run `yarn dev` to build and watch for code changes
+8. The development branch is `development` (this is the branch pull requests should be made against).
    On a release, the relevant parts of the changes in the `staging` branch are rebased into `master`.
